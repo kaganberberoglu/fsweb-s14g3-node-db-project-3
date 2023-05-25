@@ -105,7 +105,7 @@ describe('server.js', () => {
     }, 750)
   })
   describe('[GET] /api/schemes/:scheme_id/steps', () => {
-    test('[15] verilen `scheme_id` için doğru sayıda stepleri dönüyor'  , async () => {
+    test('[15] verilen `scheme_id` için doğru sayıda stepleri dönüyor', async () => {
       const stepCounts = [[1, 3], [2, 2], [3, 3], [4, 3], [5, 1], [6, 4], [7, 0]]
       for (let idx = 0; idx < stepCounts.length; idx++) {
         const res = await request(server).get(`/api/schemes/${stepCounts[idx][0]}/steps`)
